@@ -1,0 +1,67 @@
+Facility, Echelon
+bb,2
+ ,Selection,Cost
+Capacity,2,1300
+Location,bb,2604
+Vehicle,Node Label(s) served in echelon 1,Cost
+1,"['e', 'h']",40
+2,"['k', 'd']",77
+
+Facility, Echelon
+cc,2
+ ,Selection,Cost
+Capacity,2,1300
+Location,cc,2527
+Vehicle,Node Label(s) served in echelon 1,Cost
+1,['a'],37
+2,['m'],81
+3,"['r', 't']",126
+
+Facility, Echelon
+ff,2
+ ,Selection,Cost
+Capacity,2,1300
+Location,ff,2520
+Vehicle,Node Label(s) served in echelon 1,Cost
+1,['j'],59
+2,['p'],95
+3,"['x', 'n']",137
+
+Facility, Echelon
+kk,2
+ ,Selection,Cost
+Capacity,2,1300
+Location,kk,2641
+Vehicle,Node Label(s) served in echelon 1,Cost
+1,"['c', 'z']",64
+2,"['w', 'b']",75
+
+Facility, Echelon
+mm,2
+ ,Selection,Cost
+Capacity,2,1300
+Location,mm,2690
+Vehicle,Node Label(s) served in echelon 1,Cost
+1,"['f', 'q']",104
+2,['g'],59
+3,['i'],51
+
+Facility, Echelon
+aaa,3
+ ,Selection,Cost
+Capacity,1,1500
+Location,aaa,3832
+Vehicle,Node Label(s) served in echelon 2,Cost
+1,['bb'],178
+2,['mm'],280
+
+Facility, Echelon
+ccc,3
+ ,Selection,Cost
+Capacity,2,1800
+Location,ccc,3894
+Vehicle,Node Label(s) served in echelon 2,Cost
+1,['cc'],146
+2,['ff'],286
+3,['kk'],250
+
