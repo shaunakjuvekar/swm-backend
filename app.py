@@ -1,10 +1,14 @@
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 import json
-#import csv_convert as csv_transform
+import gurobi as gc
+import csv_convert 
+import time
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
+
+
 
 
 @app.route('/') 
@@ -27,8 +31,26 @@ def receive_data():
     #title = request.json['title']
     #body = request.json['body']
     locations = request.json
+    #gurobi(locations)
+    #sleep(120)
+    #python run (csv_convert.py)
     #csv_transform.convert_csv(locations)
     print(locations)
+    try:
+        with open("route_data.py", "w") as json_file:
+            json.dump(locations, json_file)
+    except:
+        print("Error while witing to file")
+    finally:
+        print("Success")
+
+    gc.main()
+    time.sleep(5)
+    csv_convert.main()
+    
+    #exec(gc)
+    #runpy.run_path(path_name='gurobi.py')
+        
     return {'success':'1'}
 
 
@@ -43,4 +65,4 @@ def send_data():
     return route_data
 
 if __name__=='__main__':
-    app.run(debug=True, port=5002)
+    app.run(debug=True, port=5002, use_reloader=False)
