@@ -3,10 +3,11 @@ import ast
 import json
 import math
 
-frontend_data = []
+
 
 #def convert_csv():
 def main():
+    frontend_data = []
     print("csv_convert called from app.py")
     with open('sample_output.csv', 'r', newline='') as inputFile, open('output_final.csv', 'w', newline='') as writerFile:
         

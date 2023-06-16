@@ -352,8 +352,6 @@ def main():
 if __name__ == "__main__":
     
     main()
-    print("After gurobi main()")
-    csv_convert.main()
     #######Writing To JSON#################
     
     #with open('data.json', 'w') as f:
